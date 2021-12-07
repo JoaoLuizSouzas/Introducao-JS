@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste JavaScript</title>
+    <script>
+        function acendeLampada() { /*criação de uma função para acender a lampada. tudo que estiver dentro de () é considerado parametro, e tudo que estiver dentro de {} é o código*/
+         document.getElementById("luz").src = "_imagens/lampada-acesa.jpg"; /*o getElementById pega um elemento pelo ID, nesse caso vai pegar o Luz que foi acriado abaixo, e irá auterar o src, foi adicionado o caminho para a nova imagem*/
+        }
+
+        function apagaLampada() {
+        document.getElementById("luz").src = "_imagens/lampada-apagada.jpg";
+
+        }
+
+        function quebraLampada() {
+            document.getElementById("luz").src = "_imagens/lampada-quebrada.jpg";
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Acenda a Lâmpada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()"/>
+</body>
+</html>
